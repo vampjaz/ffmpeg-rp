@@ -11,13 +11,13 @@ There are a few limitations of this:
 - If you kill it with ctrl-c, the rich presence script will exit but ffmpeg will keep running with no output, making it hard to tell what's going on.
 - It was thrown together in an hour so don't expect it to be bug free!
 
-Basically, its run but appending this to the end of your ffmpeg command to pipe the status messages into the script:
+Basically, its run by appending this to the end of your ffmpeg command to pipe the status messages into the script:
 
 ```shell
 2>&1 | python3 ~/path/to/parser.py
 ```
 
-Having to past that every time sounded annoyong, so in order to run it, I added this to my bashrc:
+Having to paste that every time got annoying, so in order to run it, I added this to my bashrc:
 
 ```shell
 # ffmpeg rich presence
@@ -28,7 +28,7 @@ function ffmpeg {
 ```
 *(you may need to change the path to the ffmpeg file and the parser script)*
 
-Which creates a bash function so that you can run most ffmpeg commands normally There are some extra limitations of this method:
+Which creates a bash function so that you can run most ffmpeg commands normally, thought there are some extra limitations of this method:
 - Your input and output file names cannot have any spaces in them, even if they are escaped properly. This is an issue with bash function argument passing.
 - If you want to use the normal ffmpeg (without the rich presence running), you'd have to call the full executable path
 
