@@ -1,6 +1,8 @@
 FFMPEG rich presence for Discord
 ===
 
+![example screenshot](https://github.com/red-green/ffmpeg-rp/raw/master/example.png)
+
 A simple script that parses the output of ffmpeg (specifically the status messages written to stderr) and shows the progress of your encode with discord rich presence. Now your friends can see when you're torturing your cpu too!
 
 There are a few limitations of this:
